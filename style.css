@@ -389,6 +389,138 @@ body {
   transform: scale(0.95);
 }
 
+/* ===== MODAL NOMOR HP ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-box {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 28px 28px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  animation: modalSlideUp 0.3s ease-out;
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--gray);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--dark);
+}
+
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  -moz-appearance: textfield;
+}
+
+.modal-input::-webkit-outer-spin-button,
+.modal-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-input:focus {
+  border-color: var(--primary);
+}
+
+.modal-error {
+  color: #e63946;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.modal-btn-submit {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: var(--wa-green);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.modal-btn-submit:hover {
+  background: var(--wa-green-dark);
+  transform: translateY(-1px);
+}
+
+.modal-btn-submit:active {
+  transform: translateY(0);
+}
+
+.modal-change-wrap {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.modal-btn-change {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.modal-btn-change:hover {
+  color: var(--primary-dark);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   .hero {

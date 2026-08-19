@@ -123,6 +123,20 @@
     </svg>
   </a>
 
+  <!-- MODAL NOMOR HP -->
+  <div id="phoneModal" class="modal-overlay" style="display:none;">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Tutup">&times;</button>
+      <h3 class="modal-title">Masukkan Nomor HP</h3>
+      <input type="tel" id="phoneInput" class="modal-input" placeholder="08xxxxxxxxxx" maxlength="13" inputmode="numeric">
+      <div id="phoneError" class="modal-error" style="display:none;"></div>
+      <button id="phoneSubmit" class="modal-btn-submit">Lanjutkan</button>
+      <div id="phoneChangeWrap" class="modal-change-wrap" style="display:none;">
+        <button id="phoneChange" class="modal-btn-change">Ganti Nomor</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
