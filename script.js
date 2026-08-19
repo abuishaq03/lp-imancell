@@ -31,7 +31,19 @@ var packages = [
   { operator: 'telkomsel', operatorName: 'Telkomsel', quota: '16', price: '55.000', validity: '28 Hari', logo: 'image/telkomsel.png' },
   { operator: 'telkomsel', operatorName: 'Telkomsel', quota: '25', price: '70.000', validity: '28 Hari', logo: 'image/telkomsel.png' },
   { operator: 'telkomsel', operatorName: 'Telkomsel', quota: '40', price: '85.000', validity: '28 Hari', logo: 'image/telkomsel.png' },
-  { operator: 'telkomsel', operatorName: 'Telkomsel', quota: '60', price: '105.000', validity: '28 Hari', logo: 'image/telkomsel.png' }
+  { operator: 'telkomsel', operatorName: 'Telkomsel', quota: '60', price: '105.000', validity: '28 Hari', logo: 'image/telkomsel.png' },
+
+  // Indosat Ooredoo
+  { operator: 'indosat', operatorName: 'Indosat Ooredoo', quota: '40', price: '80.000', validity: '28 Hari', logo: 'image/indosat.png' },
+  { operator: 'indosat', operatorName: 'Indosat Ooredoo', quota: '51', price: '90.000', validity: '28 Hari', logo: 'image/indosat.png' },
+  { operator: 'indosat', operatorName: 'Indosat Ooredoo', quota: '100', price: '125.000', validity: '28 Hari', logo: 'image/indosat.png' },
+  { operator: 'indosat', operatorName: 'Indosat Ooredoo', quota: '150', price: '150.000', validity: '28 Hari', logo: 'image/indosat.png' },
+
+  // Axis
+  { operator: 'axis', operatorName: 'Axis', quota: '14', price: '45.000', validity: '28 Hari', logo: 'image/axis.png' },
+  { operator: 'axis', operatorName: 'Axis', quota: '22', price: '60.000', validity: '28 Hari', logo: 'image/axis.png' },
+  { operator: 'axis', operatorName: 'Axis', quota: '33', price: '75.000', validity: '28 Hari', logo: 'image/axis.png' },
+  { operator: 'axis', operatorName: 'Axis', quota: '60', price: '95.000', validity: '28 Hari', logo: 'image/axis.png' }
 ];
 
 var waNumber = '6287812203568';
