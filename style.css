@@ -521,6 +521,82 @@ body {
   color: var(--primary-dark);
 }
 
+/* Payment Method */
+.modal-payment-section {
+  margin-top: 18px;
+}
+
+.modal-payment-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.modal-payment-options {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-payment-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.modal-payment-option:hover {
+  border-color: var(--primary-light);
+}
+
+.modal-payment-option:has(input[type="radio"]:checked) {
+  border-color: var(--primary);
+  background: rgba(0, 119, 182, 0.05);
+}
+
+.modal-payment-option input[type="radio"] {
+  display: none;
+}
+
+.modal-payment-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gray-light);
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+
+.modal-payment-option input[type="radio"]:checked ~ .modal-payment-radio {
+  border-color: var(--primary);
+}
+
+.modal-payment-option input[type="radio"]:checked ~ .modal-payment-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.modal-payment-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   .hero {

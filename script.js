@@ -93,6 +93,20 @@ function validatePhone(input) {
   return { valid: true, phone: normalized };
 }
 
+function getSavedPayment() {
+  try {
+    return localStorage.getItem('imancell_payment') || 'Cash';
+  } catch (e) {
+    return 'Cash';
+  }
+}
+
+function savePayment(method) {
+  try {
+    localStorage.setItem('imancell_payment', method);
+  } catch (e) {}
+}
+
 // ===== MODAL FUNCTIONS =====
 function showModal() {
   var modal = document.getElementById('phoneModal');
@@ -108,6 +122,10 @@ function showModal() {
     input.value = '';
   }
 
+  var savedPayment = getSavedPayment();
+  var paymentRadio = document.querySelector('input[name="paymentMethod"][value="' + savedPayment + '"]');
+  if (paymentRadio) paymentRadio.checked = true;
+
   modal.style.display = 'flex';
   setTimeout(function() { input.focus(); }, 100);
 }
@@ -119,10 +137,12 @@ function hideModal() {
 
 function openWhatsApp(pkg) {
   var phone = getSavedPhone();
+  var payment = getSavedPayment();
   var message = 'Halo ' + storeName + ', saya ingin memesan:\n' +
     'Produk: ' + pkg.operatorName + ' ' + pkg.quota + ' GB\n' +
     'Harga: Rp' + pkg.price + '\n' +
-    'Nomor HP: ' + phone;
+    'Nomor HP: ' + phone + '\n' +
+    'Metode Pembayaran: ' + payment;
   var waLink = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(message);
   window.open(waLink, '_blank');
 }
@@ -240,6 +260,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     savePhone(result.phone);
+
+    var paymentRadio = document.querySelector('input[name="paymentMethod"]:checked');
+    if (paymentRadio) {
+      savePayment(paymentRadio.value);
+    }
+
     hideModal();
 
     if (pendingPackage) {

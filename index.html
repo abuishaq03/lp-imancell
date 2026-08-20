@@ -130,6 +130,21 @@
       <h3 class="modal-title">Masukkan Nomor HP</h3>
       <input type="tel" id="phoneInput" class="modal-input" placeholder="08xxxxxxxxxx" maxlength="13" inputmode="numeric">
       <div id="phoneError" class="modal-error" style="display:none;"></div>
+      <div class="modal-payment-section">
+        <label class="modal-payment-label">Metode Pembayaran</label>
+        <div class="modal-payment-options">
+          <label class="modal-payment-option">
+            <input type="radio" name="paymentMethod" value="Cash" checked>
+            <span class="modal-payment-radio"></span>
+            <span class="modal-payment-text">Cash</span>
+          </label>
+          <label class="modal-payment-option">
+            <input type="radio" name="paymentMethod" value="Transfer">
+            <span class="modal-payment-radio"></span>
+            <span class="modal-payment-text">Transfer</span>
+          </label>
+        </div>
+      </div>
       <button id="phoneSubmit" class="modal-btn-submit">Lanjutkan</button>
       <div id="phoneChangeWrap" class="modal-change-wrap" style="display:none;">
         <button id="phoneChange" class="modal-btn-change">Ganti Nomor</button>
